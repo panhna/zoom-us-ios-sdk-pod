@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "ZoomSDK"
   spec.version      = "4.6.15805.0403"
-  spec.summary      = "Original framework for Zoom.us service"
+  spec.summary      = "Original framework for Zoom.us iOS SDK for ARM. Not for simulator"
   spec.homepage     = "https://github.com/zoom/zoom-sdk-ios"
   spec.license      = "MIT"
   spec.author             = { "Mokriya" => "info@mokriya.com" }
@@ -19,10 +19,11 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/mokriya-org/zoom-us-ios-sdk-pod.git", :tag => "v#{spec.version}" }
 
-  spec.libraries = "z", "c++", "sqlite3"
-  spec.frameworks = "Foundation", "UIKit", "VideoToolbox", "CoreBluetooth", "ReplayKit", "CoreMotion"
+  # spec.libraries = "z", "c++", "sqlite3"
+  # spec.frameworks = "Foundation", "UIKit", "VideoToolbox", "CoreBluetooth", "ReplayKit", "CoreMotion"
 
   spec.default_subspec = 'Core'
+  spec.requires_arc = true
 
   spec.subspec 'Core' do |subspec|
     subspec.ios.source_files           = "MobileRTC.framework/Headers/**/*.{h,m}"
