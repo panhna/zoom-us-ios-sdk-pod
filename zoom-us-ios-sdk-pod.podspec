@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.author             = { "Mokriya" => "info@mokriya.com" }
 
   spec.swift_version              = "5.0"
-  spec.ios.deployment_target      = "10.0"
+  spec.ios.deployment_target      = "9.0"
 
   spec.source       = { :git => "https://github.com/mokriya-org/zoom-us-ios-sdk-pod.git", :tag => "v#{spec.version}" }
 
